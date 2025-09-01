@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPentestTool - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px dashed #4ca1af;
+        }
+        
+        .btn-download {
+            display: inline-block;
+            background: linear-gradient(90deg, #2c3e50, #4ca1af);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(90deg, #4ca1af, #2c3e50);
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #4ca1af;
+        }
+        
+        .instructions {
+            background: #e9ecef;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .instructions code {
+            background: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: block;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🔒</div>
+            <h1>WebPentestTool</h1>
+            <p>Ferramenta de teste de penetração para aplicações web</p>
+        </header>
+        
+        <div class="content">
+            <div class="warning">
+                <h3>⚠️ AVISO LEGAL</h3>
+                <p>Esta ferramenta é destinada apenas para fins educacionais e testes autorizados. 
+                Não utilize em sistemas que você não possui ou não tem permissão explícita para testar. 
+                O uso não autorizado desta ferramenta é ilegal e pode resultar em consequências legales.</p>
+            </div>
+            
+            <div class="download-section">
+                <h2>Download WebPentestTool</h2>
+                <p>Clique no botão abaixo para baixar a versão mais recente</p>
+                <a href="https://takeout-download-drive.usercontent.google.com/download/dist-20250901T154157Z-1-001.zip?j=96e15aba-2844-49b7-9198-7df36f913cc6&i=0&user=564674315114&authuser=1" class="btn-download" id="downloadBtn">📥 Download WebPentestTool.exe</a>
+                <p>Tamanho: 8.7 MB | Versão: 1.0.0</p>
+            </div>
+            
+            <h2>Funcionalidades</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Teste de XSS</h3>
+                    <p>Detecta vulnerabilidades de Cross-Site Scripting em formulários e parâmetros URL.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🗃️</div>
+                    <h3>SQL Injection</h3>
+                    <p>Testa possíveis vulnerabilidades de injeção de SQL em aplicações web.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📁</div>
+                    <h3>Directory Traversal</h3>
+                    <p>Verifica falhas que permitem acesso a arquivos sensíveis do sistema.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Header Analysis</h3>
+                    <p>Analisa os cabeçalhos HTTP em busca de problemas de segurança.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Web Crawling</h3>
+                    <p>Coleta links e descobre estrutura do site automaticamente.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Relatórios Detalhados</h3>
+                    <p>Gera relatórios completos em formato texto com os resultados dos testes.</p>
+                </div>
+            </div>
+            
+            <div class="instructions">
+                <h3>Como Usar</h3>
+                <p>Após baixar o arquivo, você pode executar a ferramenta de duas formas:</p>
+                
+                <h4>Modo Interativo (Recomendado para iniciantes):</h4>
+                <code>WebPentestTool.exe</code>
+                
+                <h4>Modo Linha de Comando (Para usuários avançados):</h4>
+                <code>WebPentestTool.exe https://exemplo.com -a</code>
+                
+                <h4>Opções disponíveis:</h4>
+                <code>-a, --all &nbsp;&nbsp;&nbsp;&nbsp;Executar todos os testes</code>
+                <code>-x, --xss &nbsp;&nbsp;&nbsp;&nbsp;Testar apenas XSS</code>
+                <code>-s, --sql &nbsp;&nbsp;&nbsp;&nbsp;Testar apenas SQL Injection</code>
+                <code>-d, --dir &nbsp;&nbsp;&nbsp;&nbsp;Testar apenas Directory Traversal</code>
+                <code>-H, --headers Verificar apenas headers</code>
+                <code>-c, --crawl &nbsp;Apenas coletar links</code>
+            </div>
+            
+            <div class="instructions">
+                <h3>Requisitos do Sistema</h3>
+                <ul>
+                    <li>Sistema Operacional: Windows 7, 8, 10 ou 11</li>
+                    <li>Arquitetura: 64-bit (x64)</li>
+                    <li>Memória RAM: 2GB ou mais</li>
+                    <li>Espaço em disco: 10MB livres</li>
+                    <li>Conexão com internet para testes</li>
+                </ul>
+            </div>
+            
+            <div class="warning">
+                <h3>Notas de Segurança</h3>
+                <p>O executável pode ser detectado por alguns antivírus como falso positivo devido à natureza da ferramenta. 
+                Isso é comum com aplicações de segurança e teste de penetração. Se necessário, adicione o arquivo à lista de 
+                exceções do seu antivírus.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>WebPentestTool - Ferramenta para fins educacionais e testes autorizados</p>
+            <p>© 2023 - Desenvolvido para propósitos educacionais</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Confirmação de uso legal
+            const response = confirm("⚠️ AVISO LEGAL: Você confirma que usará esta ferramenta apenas para testes autorizados e fins educacionais?");
+            
+            if (response) {
+                // Redireciona para o link de download após confirmação
+                window.location.href = 'https://takeout-download-drive.usercontent.google.com/download/dist-20250901T154157Z-1-001.zip?j=96e15aba-2844-49b7-9198-7df36f913cc6&i=0&user=564674315114&authuser=1';
+            } else {
+                alert("Download cancelado. Esta ferramenta só deve ser usada com permissão adequada.");
+            }
+        });
+    </script>
+</body>
+</html>
