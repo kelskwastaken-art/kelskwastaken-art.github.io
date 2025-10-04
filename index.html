@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebScanner - Scanner de Vulnerabilidades</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .download-btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+        }
+
+        .version {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .instructions {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .instructions h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .cmd-example {
+            background: #1a1a1a;
+            color: #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            border-left: 4px solid #00ff00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .download-btn {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🛡️</div>
+            <h1>WebScanner</h1>
+            <p class="subtitle">Scanner Profissional de Vulnerabilidades Web</p>
+            <a href="https://drive.usercontent.google.com/download?id=1aaHQxIq4iShFNNqdqvE5nDHt-TBl0lrg&export=download&authuser=0&confirm=t&uuid=8f72a82d-c277-4aa2-8ff3-6dba0f4391c0&at=AKSUxGPnsXN4NU4CYa-ouZc9v5UE%3A1759542479364" download class="download-btn">
+                📥 DOWNLOAD GRATUITO
+            </a>
+            <p class="version">Versão 2.0 - Compatível com Windows 10/11</p>
+        </header>
+
+        <section class="features">
+            <h2 style="text-align: center; color: #667eea; font-size: 2.5rem; margin-bottom: 20px;">Recursos do Scanner</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 40px;">
+                Ferramenta completa para testes de segurança em aplicações web
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💉</div>
+                    <h3>SQL Injection</h3>
+                    <p>Detecta vulnerabilidades de injeção de SQL em formulários e parâmetros URL</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>XSS Testing</h3>
+                    <p>Identifica falhas de Cross-Site Scripting em campos de entrada</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3>Directory Traversal</h3>
+                    <p>Testa acesso não autorizado a arquivos do sistema</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Arquivos Sensíveis</h3>
+                    <p>Procura por arquivos de configuração e backups expostos</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Relatórios Detalhados</h3>
+                    <p>Gera relatórios completos em formato texto</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Interface CMD</h3>
+                    <p>Roda diretamente no prompt de comando do Windows</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>Como Usar</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Baixe o App</h3>
+                    <p>Clique no botão de download acima para baixar WebScanner.exe</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Abra o CMD</h3>
+                    <p>Pressione Windows + R, digite "cmd" e pressione Enter</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Execute o Scanner</h3>
+                    <p>Navegue até a pasta do arquivo e execute os comandos</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 40px auto;">
+                <h3 style="text-align: center; margin-bottom: 20px;">Exemplos de Uso:</h3>
+                
+                <div class="cmd-example">
+                    # Scan interativo<br>
+                    WebScanner.exe
+                </div>
+                
+                <div class="cmd-example">
+                    # Scan direto em um site<br>
+                    WebScanner.exe http://exemplo.com
+                </div>
+                
+                <div class="cmd-example">
+                    # Scan com salvamento de resultados<br>
+                    WebScanner.exe https://site.com -o resultado.txt
+                </div>
+            </div>
+        </section>
+
+        <div class="warning">
+            <h3>⚠️ AVISO IMPORTANTE</h3>
+            <p>Este software é destinado apenas para:</p>
+            <ul style="margin: 10px 0 10px 30px;">
+                <li>Testes em seus próprios sites</li>
+                <li>Ambientes de desenvolvimento</li>
+                <li>Sistemas com autorização explícita</li>
+            </ul>
+            <p><strong>Não use este software para testes não autorizados. O uso inadequado pode ser ilegal.</strong></p>
+        </div>
+
+        <section class="features" style="text-align: center;">
+            <h2 style="color: #667eea; margin-bottom: 30px;">Tecnologias Utilizadas</h2>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem;">🐍</div>
+                    <h3>Python</h3>
+                    <p>Linguagem principal</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem;">🔧</div>
+                    <h3>PyInstaller</h3>
+                    <p>Compilação para EXE</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2rem;">🌐</div>
+                    <h3>Requests</h3>
+                    <p>Requisições HTTP</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 WebScanner - Ferramenta Educacional de Segurança</p>
+            <p style="margin-top: 10px;">Desenvolvido para fins educacionais e testes autorizados</p>
+        </footer>
+    </div>
+
+    <script>
+        // Efeito de confete no download
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            // Animação simples de download
+            this.innerHTML = '📥 BAIXANDO...';
+            setTimeout(() => {
+                this.innerHTML = '✅ DOWNLOAD CONCLUÍDO!';
+                this.style.background = '#4CAF50';
+            }, 1500);
+            
+            // Restaurar após 3 segundos
+            setTimeout(() => {
+                this.innerHTML = '📥 DOWNLOAD GRATUITO';
+                this.style.background = '#ff6b6b';
+            }, 4000);
+        });
+
+        // Contador de downloads (simulado)
+        let downloadCount = 1247;
+        setInterval(() => {
+            downloadCount += Math.floor(Math.random() * 5);
+            document.querySelector('.version').innerHTML = 
+                `Versão 2.0 - ${downloadCount.toLocaleString()} downloads`;
+        }, 5000);
+    </script>
+</body>
+</html>
